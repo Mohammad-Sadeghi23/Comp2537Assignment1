@@ -54,6 +54,11 @@ app.get('/login', (req, res) => {
     res.send(`Welcome to the login! ${req.session.pageHits} page hits`);
 });
 
+app.get('/*dummy', (req, res) => {
+    res.status(404)
+    res.send('Page not found - 404');
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
