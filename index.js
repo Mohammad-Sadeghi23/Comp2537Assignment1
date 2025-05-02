@@ -219,10 +219,7 @@ app.get("/members", (req, res) => {
 
 app.get("/logout", (req, res) => {
   req.session.destroy();
-  var html = `
-     You are logged out.
-     `;
-  res.send(html);
+  res.redirect("/");
 });
 
 app.use(express.static(__dirname + "/public"));
