@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 // creates sessoins database in MongoDB to store sessions
 // and uses the session secret to encrypt the session data
 var mongoStore = MongoStore.create({
-  mongoUrl: `mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}/sessions`,
+  mongoUrl: `mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}/assignment1`,
   crypto: {
     secret: MONGODB_SESSION_SECRET,
   },
